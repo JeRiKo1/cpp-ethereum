@@ -16,17 +16,12 @@
 #if __CUDA_ARCH__ < SHUFFLE_MIN_VER
 #include "keccak_u64.cuh"
 #include "dagger_shared.cuh"
-#define TPB		128
-#define BPSM	4
 #else
 #include "keccak.cuh"
 #include "dagger_shuffled.cuh"
-#define TPB		896
-#define BPSM	1
 #endif
 
 __global__ void 
-__launch_bounds__(TPB, BPSM)
 ethash_search(
 	volatile uint32_t* g_output,
 	uint64_t start_nonce
@@ -56,7 +51,6 @@ void run_ethash_search(
 #define NODE_WORDS (64/4)
 
 __global__ void
-__launch_bounds__(128, 7)
 ethash_calculate_dag_item(uint32_t start)
 {
 	uint32_t const node_index = start + blockIdx.x * blockDim.x + threadIdx.x;
@@ -127,7 +121,7 @@ void ethash_generate_dag(
 	{
 		ethash_calculate_dag_item <<<blocks, threads, 0, stream >>>(i * blocks * threads);
 		CUDA_SAFE_CALL(cudaDeviceSynchronize());
-		printf("Generate DAG device CUDA#%d: %.0f%%\n",device, 100.0f * (float)i / (float)fullRuns);
+		printf("CUDA#%d: %.0f%%\n",device, 100.0f * (float)i / (float)fullRuns);
 	}
 	//printf("GPU#%d 100%%\n");
 	CUDA_SAFE_CALL(cudaGetLastError());
