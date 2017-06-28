@@ -57,6 +57,8 @@ FIND_PATH (CRYPTOPP_INCLUDE_DIR
   PATH_SUFFIXES include
   DOC "CryptoPP include directory")
 
+message(STATUS "CRYPTOPP_INCLUDE_DIR \"${CRYPTOPP_INCLUDE_DIR}\"")
+
 if (CMAKE_CL_64)
   set(CRYPTOPP_NAMES cryptlib_x64 cryptopp_x64)
   set(CRYPTOPP_NAMES_DEBUG cryptlibd_x64 cryptoppd_x64)
