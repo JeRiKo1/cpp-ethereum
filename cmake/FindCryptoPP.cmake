@@ -67,7 +67,7 @@ FIND_LIBRARY (CRYPTOPP_LIBRARY_DEBUG
   DOC "CryptoPP debug library")
 
 FIND_LIBRARY (CRYPTOPP_LIBRARY_RELEASE
-  NAMES cryptlib cryptopp
+  NAMES cryptopp.dll
   HINTS ${CRYPTOPP_ROOT_DIR}
   PATH_SUFFIXES lib
   DOC "CryptoPP release library")
