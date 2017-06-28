@@ -44,7 +44,7 @@ INCLUDE (FindPackageHandleStandardArgs)
 SET (CRYPTO_ROOT_DIR ETH_DEPENDENCY_INSTALL_DIR)
 
 FIND_PATH (CRYPTOPP_ROOT_DIR
-  NAMES cryptlib.h include/cryptlib.h
+  NAMES cryptopp/cryptlib.h include/cryptopp/cryptlib.h
   PATHS ENV CRYPTOPPROOT
   DOC "CryptoPP root directory")
 
