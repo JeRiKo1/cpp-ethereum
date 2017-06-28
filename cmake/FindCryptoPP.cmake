@@ -41,14 +41,16 @@
 
 INCLUDE (FindPackageHandleStandardArgs)
 
+SET (CRYPTO_ROOT_DIR ETH_DEPENDENCY_INSTALL_DIR)
+
 FIND_PATH (CRYPTOPP_ROOT_DIR
-  NAMES cryptopp/cryptlib.h include/cryptopp/cryptlib.h
+  NAMES cryptlib.h include/cryptlib.h
   PATHS ENV CRYPTOPPROOT
   DOC "CryptoPP root directory")
 
 # Re-use the previous path:
 FIND_PATH (CRYPTOPP_INCLUDE_DIR
-  NAMES cryptopp/cryptlib.h
+  NAMES cryptlib.h
   HINTS ${CRYPTOPP_ROOT_DIR}
   PATH_SUFFIXES include
   DOC "CryptoPP include directory")
