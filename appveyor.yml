@@ -13,7 +13,7 @@ install: |
   set PATH=%PATH%;C:/CUDA/v8.0/bin
   nvcc -V
 before_build:
-  - cpp-ethereum/extdep/getstuff.bat
+  - extdep/getstuff.bat
   - mkdir build 
   - cd build
   - cmake -DBUNDLE=cudaminer -G "Visual Studio 14 2015 Win64" ..
