@@ -16,7 +16,7 @@ install: |
   mkdir build
   cd build
   cmake ..
-  make
+  cmake --build build
   cd ..
 before_build:
   - mkdir build 
