@@ -48,7 +48,7 @@ SET (CRYPTOPP_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/install/${_system_name}")
 #  PATHS ENV CRYPTOPPROOT
 #  DOC "CryptoPP root directory")
 
-message(STATUS "CRYPTOPP_ROOT_DIR \"${CRYPTOPP_ROOT_DIR}\")
+message(STATUS "CRYPTOPP_ROOT_DIR \"${CRYPTOPP_ROOT_DIR}\"")
 
 # Re-use the previous path:
 FIND_PATH (CRYPTOPP_INCLUDE_DIR
