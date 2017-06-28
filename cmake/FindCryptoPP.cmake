@@ -43,7 +43,7 @@ INCLUDE (FindPackageHandleStandardArgs)
 
 SET(CMAKE_FIND_LIBRARY_SUFFIXES ".lib" ".dll")
 
-SET (CRYPTOPP_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/install/${_system_name}")
+SET (CRYPTOPP_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/extdep/install/${_system_name}")
 
 #FIND_PATH (CRYPTOPP_ROOT_DIR
 #  NAMES cryptopp/cryptlib.h include/cryptopp/cryptlib.h
