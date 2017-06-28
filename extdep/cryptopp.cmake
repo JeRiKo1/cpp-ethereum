@@ -11,6 +11,7 @@ if(APPLE)
         )
 elseif(WIN32)
     file(MAKE_DIRECTORY ${ETH_DEPENDENCY_INSTALL_DIR}/include/cryptopp)
+    file(MAKE_DIRECTORY ${ETH_DEPENDENCY_INSTALL_DIR}/lib)
 
     ExternalProject_Add(cryptopp
         SVN_REPOSITORY http://svn.code.sf.net/p/cryptopp/code/trunk/c5
