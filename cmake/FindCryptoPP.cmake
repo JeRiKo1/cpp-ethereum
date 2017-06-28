@@ -41,6 +41,8 @@
 
 INCLUDE (FindPackageHandleStandardArgs)
 
+SET(CMAKE_FIND_LIBRARY_SUFFIXES ".lib" ".dll")
+
 SET (CRYPTOPP_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/install/${_system_name}")
 
 #FIND_PATH (CRYPTOPP_ROOT_DIR
@@ -67,7 +69,7 @@ FIND_LIBRARY (CRYPTOPP_LIBRARY_DEBUG
   DOC "CryptoPP debug library")
 
 FIND_LIBRARY (CRYPTOPP_LIBRARY_RELEASE
-  NAMES cryptopp.dll cryptopp.lib
+  NAMES cryptopp
   HINTS ${CRYPTOPP_ROOT_DIR}
   PATH_SUFFIXES lib
   DOC "CryptoPP release library")
