@@ -41,7 +41,7 @@
 
 INCLUDE (FindPackageHandleStandardArgs)
 
-SET (CRYPTOPP_ROOT_DIR ${ETH_DEPENDENCY_INSTALL_DIR})
+SET (CRYPTOPP_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/install/${_system_name}")
 
 #FIND_PATH (CRYPTOPP_ROOT_DIR
 #  NAMES cryptopp/cryptlib.h include/cryptopp/cryptlib.h
