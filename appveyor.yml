@@ -12,6 +12,12 @@ install: |
   7z x CUDA-v8.0-WindowsServer2012.zip -oC:/
   set PATH=%PATH%;C:/CUDA/v8.0/bin
   nvcc -V
+  cd extdep
+  mkdir build
+  cd build
+  cmake ..
+  make
+  cd ..
 before_build:
   - mkdir build 
   - cd build
