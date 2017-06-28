@@ -19,7 +19,8 @@ install: |
   cmake --build .
   cd ..
   cd ..
-  dir C:\projects\cpp-ethereum\install\windows
+  dir C:\projects\cpp-ethereum\
+  dir C:\projects\cpp-ethereum\extdep\install\windows
 before_build:
   - mkdir build 
   - cd build
