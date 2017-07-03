@@ -12,4 +12,5 @@ ExternalProject_Add(json-cpp
 	BINARY_DIR json-cpp-prefix/src/json-cpp
         #CONFIGURE_COMMAND devenv json-cpp.sln /upgrade
         BUILD_COMMAND devenv jsoncpp.sln /build release
+	INSTALL_COMMAND cmd /c cp C:\projects\cpp-ethereum\extdep\build\json-cpp-prefix\src\json-cpp\src\lib_json\Release\jsoncpp.lib ${ETH_DEPENDENCY_INSTALL_DIR}/lib && cp C:\projects\cpp-ethereum\extdep\build\json-cpp-prefix\src\json-cpp\src\lib_json\Release\*.h ${ETH_DEPENDENCY_INSTALL_DIR}/include/jsoncpp
 )
