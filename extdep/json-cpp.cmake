@@ -10,7 +10,6 @@ ExternalProject_Add(json-cpp
     # DEPENDS curl # re-enable later, when we build curl again
 	GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
 	BINARY_DIR json-cpp-prefix/src/json-cpp
-    CONFIGURE_COMMAND ${CONFIG_CMD}
-	BUILD_COMMAND make -j 3
-	INSTALL_COMMAND make install
+        CONFIGURE_COMMAND devenv json-cpp.sln /upgrade
+        BUILD_COMMAND devenv json-cpp.sln /build release
 )
