@@ -9,7 +9,7 @@ endif()
 ExternalProject_Add(json-cpp
     # DEPENDS curl # re-enable later, when we build curl again
 	GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
-	BINARY_DIR jsoncpp-prefix/src/json-rpc-cpp
+	BINARY_DIR jsoncpp-prefix/src/jsoncpp
     CONFIGURE_COMMAND ${CONFIG_CMD}
 	BUILD_COMMAND make -j 3
 	INSTALL_COMMAND make install
