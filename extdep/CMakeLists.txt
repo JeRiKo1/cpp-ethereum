@@ -11,5 +11,6 @@ file(MAKE_DIRECTORY ${ETH_DEPENDENCY_INSTALL_DIR}/include)
 
 include(cryptopp.cmake)
 # include(curl.cmake)
+include(json-cpp.cmake)
 include(json-rpc-cpp.cmake)
-include(miniupnpc.cmake)
+#include(miniupnpc.cmake)
