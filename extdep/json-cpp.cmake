@@ -11,5 +11,5 @@ ExternalProject_Add(json-cpp
 	GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
 	BINARY_DIR json-cpp-prefix/src/json-cpp
         #CONFIGURE_COMMAND devenv json-cpp.sln /upgrade
-        BUILD_COMMAND devenv json-cpp.vcxproj /build release
+        BUILD_COMMAND devenv jsoncpp.sln /build release
 )
