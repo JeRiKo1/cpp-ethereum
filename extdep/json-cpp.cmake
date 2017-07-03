@@ -10,6 +10,6 @@ ExternalProject_Add(json-cpp
     # DEPENDS curl # re-enable later, when we build curl again
 	GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
 	BINARY_DIR json-cpp-prefix/src/json-cpp
-        CONFIGURE_COMMAND devenv json-cpp.sln /upgrade
-        BUILD_COMMAND devenv json-cpp.sln /build release
+        #CONFIGURE_COMMAND devenv json-cpp.sln /upgrade
+        BUILD_COMMAND devenv json-cpp.vcxproj /build release
 )
